@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sudoku</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sudoku-Solver</h1>
+      <div id="gameCanvas">
+        <div class="board" board="0">
+            <input type="number" class="number" value="0" row="1" column="1">
+            <input type="number" class="number" value="0" row="1" column="2">
+            <input type="number" class="number" value="0" row="1" column="3">
+            <input type="number" class="number" value="0" row="2" column="1">
+            <input type="number" class="number" value="0" row="2" column="2">
+            <input type="number" class="number" value="0" row="2" column="3">
+            <input type="number" class="number" value="0" row="3" column="1">
+            <input type="number" class="number" value="0" row="3" column="2">
+            <input type="number" class="number" value="0" row="3" column="3">
+        </div>
+        <div class="board" board="1">
+            <input type="number" class="number" value="0" row="1" column="4">
+            <input type="number" class="number" value="0" row="1" column="5">
+            <input type="number" class="number" value="0" row="1" column="6">
+            <input type="number" class="number" value="0" row="2" column="4">
+            <input type="number" class="number" value="0" row="2" column="5">
+            <input type="number" class="number" value="0" row="2" column="6">
+            <input type="number" class="number" value="0" row="3" column="4">
+            <input type="number" class="number" value="0" row="3" column="5">
+            <input type="number" class="number" value="0" row="3" column="6">
+        </div>
+        <div class="board" board="2">
+            <input type="number" class="number" value="0" row="1" column="7">
+            <input type="number" class="number" value="0" row="1" column="8">
+            <input type="number" class="number" value="0" row="1" column="9">
+            <input type="number" class="number" value="0" row="2" column="7">
+            <input type="number" class="number" value="0" row="2" column="8">
+            <input type="number" class="number" value="0" row="2" column="9">
+            <input type="number" class="number" value="0" row="3" column="7">
+            <input type="number" class="number" value="0" row="3" column="8">
+            <input type="number" class="number" value="0" row="3" column="9">
+        </div>
+        <div class="board" board="3">
+            <input type="number" class="number" value="0" row="4" column="1">
+            <input type="number" class="number" value="0" row="4" column="2">
+            <input type="number" class="number" value="0" row="4" column="3">
+            <input type="number" class="number" value="0" row="5" column="1">
+            <input type="number" class="number" value="0" row="5" column="2">
+            <input type="number" class="number" value="0" row="5" column="3">
+            <input type="number" class="number" value="0" row="6" column="1">
+            <input type="number" class="number" value="0" row="6" column="2">
+            <input type="number" class="number" value="0" row="6" column="3">
+        </div>
+        <div class="board" board="4">
+            <input type="number" class="number" value="0" row="4" column="4">
+            <input type="number" class="number" value="0" row="4" column="5">
+            <input type="number" class="number" value="0" row="4" column="6">
+            <input type="number" class="number" value="0" row="5" column="4">
+            <input type="number" class="number" value="0" row="5" column="5">
+            <input type="number" class="number" value="0" row="5" column="6">
+            <input type="number" class="number" value="0" row="6" column="4">
+            <input type="number" class="number" value="0" row="6" column="5">
+            <input type="number" class="number" value="0" row="6" column="6">
+        </div>
+        <div class="board" board="5">
+            <input type="number" class="number" value="0" row="4" column="7">
+            <input type="number" class="number" value="0" row="4" column="8">
+            <input type="number" class="number" value="0" row="4" column="9">
+            <input type="number" class="number" value="0" row="5" column="7">
+            <input type="number" class="number" value="0" row="5" column="8">
+            <input type="number" class="number" value="0" row="5" column="9">
+            <input type="number" class="number" value="0" row="6" column="7">
+            <input type="number" class="number" value="0" row="6" column="8">
+            <input type="number" class="number" value="0" row="6" column="9">
+        </div>
+        <div class="board" board="6">
+            <input type="number" class="number" value="0" row="7" column="1">
+            <input type="number" class="number" value="0" row="7" column="2">
+            <input type="number" class="number" value="0" row="7" column="3">
+            <input type="number" class="number" value="0" row="8" column="1">
+            <input type="number" class="number" value="0" row="8" column="2">
+            <input type="number" class="number" value="0" row="8" column="3">
+            <input type="number" class="number" value="0" row="9" column="1">
+            <input type="number" class="number" value="0" row="9" column="2">
+            <input type="number" class="number" value="0" row="9" column="3">
+        </div>
+        <div class="board" board="7">
+            <input type="number" class="number" value="0" row="7" column="4">
+            <input type="number" class="number" value="0" row="7" column="5">
+            <input type="number" class="number" value="0" row="7" column="6">
+            <input type="number" class="number" value="0" row="8" column="4">
+            <input type="number" class="number" value="0" row="8" column="5">
+            <input type="number" class="number" value="0" row="8" column="6">
+            <input type="number" class="number" value="0" row="9" column="4">
+            <input type="number" class="number" value="0" row="9" column="5">
+            <input type="number" class="number" value="0" row="9" column="6">
+        </div>
+        <div class="board" board="8">
+            <input type="number" class="number" value="0" row="7" column="7">
+            <input type="number" class="number" value="0" row="7" column="8">
+            <input type="number" class="number" value="0" row="7" column="9">
+            <input type="number" class="number" value="0" row="8" column="7">
+            <input type="number" class="number" value="0" row="8" column="8">
+            <input type="number" class="number" value="0" row="8" column="9">
+            <input type="number" class="number" value="0" row="9" column="7">
+            <input type="number" class="number" value="0" row="9" column="8">
+            <input type="number" class="number" value="0" row="9" column="9">
+        </div>
+      </canvas>
+    </div>
+    <button id="solveButton">Solve</button>
+    <script src="../app/game.js"></script>
+  </body>
+</html>
